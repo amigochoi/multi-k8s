@@ -9,6 +9,7 @@ docker push amigochoi/multi-worker:latest
 docker push amigochoi/multi-client:$SHA
 docker push amigochoi/multi-server:$SHA
 docker push amigochoi/multi-worker:$SHA
+
 kubectl apply -f k8s
 kubectl set image deployments/server-deployment server=amigochoi/multi-server:$SHA
 kubectl set image deployments/client-deployment client=amigochoi/multi-client:$SHA
