@@ -1,6 +1,6 @@
-docker build -t amigochoi/multi-client:latest amigochoi/multi-client:$SHA -f ./client/Dockerfile ./client
-docker build -t amigochoi/multi-server:latest amigochoi/multi-server:$SHA -f ./server/Dockerfile ./server
-docker build -t amigochoi/multi-worker:latest amigochoi/multi-worker:$SHA -f ./worker/Dockerfile ./worker
+docker build -t amigochoi/multi-client:latest -t amigochoi/multi-client:$SHA -f ./client/Dockerfile ./client
+docker build -t amigochoi/multi-server:latest -t amigochoi/multi-server:$SHA -f ./server/Dockerfile ./server
+docker build -t amigochoi/multi-worker:latest -t amigochoi/multi-worker:$SHA -f ./worker/Dockerfile ./worker
 
 docker push amigochoi/multi-client:latest
 docker push amigochoi/multi-server:latest
