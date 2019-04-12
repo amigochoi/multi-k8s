@@ -1,0 +1,20 @@
+apiVersion: certmanager.k8s.io/v1alpha1
+kind: Certificate
+metadata:
+  name: amigochoi-com-tls
+spec:
+  secretName: amigochoi-com
+  issuerRef: 
+    name: letsencrypt-prod
+    kind: ClusterIssuer
+  commonName: amigochoi.com
+  dnsNames:
+    - amigochoi.com
+    - www.amigochoi.com
+  acme:
+    config:
+      -http01:
+        ingressClass: nginx
+      domains:
+        - amigochoi.com
+        - www.amigochoi.com
