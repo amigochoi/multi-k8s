@@ -13,8 +13,8 @@ spec:
     - www.amigochoi.com
   acme:
     config:
-      -http01:
-        ingressClass: nginx
+      - http01:
+          ingressClass: nginx
       domains:
         - amigochoi.com
         - www.amigochoi.com
