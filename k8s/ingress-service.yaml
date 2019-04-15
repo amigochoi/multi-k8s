@@ -25,7 +25,6 @@ spec:
             backend: 
               serviceName: server-cluster-ip-service
               servicePort: 5000
-              - host: amigochoi.com
     - host: www.amigochoi.com
       http:
         paths:
